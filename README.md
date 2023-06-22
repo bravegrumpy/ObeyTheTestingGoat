@@ -10,7 +10,7 @@ The book has a unique branch for each chapter. I do not yet know if I will be fo
 
 ## Completed Chapters
 
-- [x] [Chapter 1][Chapter 1]
+- [x] [Chapter 1 -- Getting Django Set Up Using a Functional Test][Chapter 1]
 - [x] [Prerequisites and Installations][Chapter 0]
 
 ## Changelog
