@@ -6,7 +6,7 @@ I am using it specifically to enhance my Django Web Dev skills.
 
 ## Branches
 
-The book has a unique branch for each chapter. I do not yet know if I will be following that guide.
+The book has a unique branch for each chapter. I will not.
 
 ## Completed Chapters
 
