@@ -10,6 +10,7 @@ The book has a unique branch for each chapter. I do not yet know if I will be fo
 
 ## Completed Chapters
 
+- [x] [Chapter 1][Chapter 1]
 - [x] [Prerequisites and Installations][Chapter 0]
 
 ## Changelog
@@ -17,3 +18,4 @@ The book has a unique branch for each chapter. I do not yet know if I will be fo
 2023-06-22 -- Setting up environment and stuff
 
 [Chapter 0]: https://www.obeythetestinggoat.com/book/pre-requisite-installations.html
+[Chapter 1]: https://www.obeythetestinggoat.com/book/chapter_01.html
