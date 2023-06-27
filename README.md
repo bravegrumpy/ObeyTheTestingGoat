@@ -10,6 +10,7 @@ The book has a unique branch for each chapter. I will not.
 
 ## Completed Chapters
 
+- [x] [Chapter 3 -- Testing a Simple Home Page with Unit Tests][Chapter 3]
 - [x] [Chapter 2 -- Extending Our Functional Test Using the unittest Module][Chapter 2]
 - [x] [Chapter 1 -- Getting Django Set Up Using a Functional Test][Chapter 1]
 - [x] [Prerequisites and Installations][Chapter 0]
@@ -21,3 +22,4 @@ The book has a unique branch for each chapter. I will not.
 [Chapter 0]: https://www.obeythetestinggoat.com/book/pre-requisite-installations.html
 [Chapter 1]: https://www.obeythetestinggoat.com/book/chapter_01.html
 [Chapter 2]: https://www.obeythetestinggoat.com/book/chapter_02_unittest.html
+[Chapter 3]: https://www.obeythetestinggoat.com/book/chapter_unit_test_first_view.html
