@@ -4,9 +4,13 @@ This repo follows [Obey the Testing Goat](https://www.obeythetestinggoat.com/pag
 
 I am using it specifically to enhance my Django Web Dev skills.
 
-## Branches
+## Beyond the Book
 
-The book has a unique branch for each chapter. I will not.
+Once I've completed this book to the degree that I want to, I hope to:
+
+- [ ] figure out how to containerize this application.
+- [ ] found out if there is a free open source version of heroku/cf to push to.
+- [ ] write a similar code, but with file i/o.
 
 ## Completed Chapters
 
