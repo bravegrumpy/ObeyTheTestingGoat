@@ -8,7 +8,7 @@ from django.shortcuts import render
 
 def home_page(request):
     item = Item()
-    # TODO: FIXME: This adds an empty entry for every desired entry.
+    # FIXME: #2 This adds an empty entry for every desired entry.
     item.text = request.POST.get('item_text', '')
     item.save()
 
