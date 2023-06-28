@@ -3,7 +3,7 @@ from django.test import TestCase
 from django.http import HttpRequest
 from django.template.loader import render_to_string
 
-from lists.views import home_page
+# from lists.views import home_page
 from lists.models import Item
 
 # Create your tests here.
