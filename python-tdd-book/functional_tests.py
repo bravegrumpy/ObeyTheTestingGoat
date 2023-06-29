@@ -29,9 +29,7 @@ class NewVisitorTest(unittest.TestCase):
         header_text = self.browser.find_element(By.TAG_NAME, 'h1').text
         self.assertIn('To-Do', header_text)
 
-        """
-        She is invited to enter a to-do item straight away
-        """
+        # She is invited to enter a to-do item straight away
         inputbox = self.browser.find_element(By.ID, 'id_new_item')
         self.assertEqual(
             inputbox.get_attribute('placeholder'),
