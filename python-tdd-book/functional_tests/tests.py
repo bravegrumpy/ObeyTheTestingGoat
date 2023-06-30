@@ -5,16 +5,10 @@ from selenium.webdriver.common.keys import Keys
 import time
 from selenium.common.exceptions import WebDriverException
 
+MAX_WAIT = 10
+
+
 class NewVisitorTest(LiveServerTestCase):
-    """
-    This is my functional Test class
-
-    :param LiveServerTestCase: Django provided test server
-    :type LiveServerTestCase: test server
-    :raises e: Assertion Errors
-    """
-
-    MAX_WAIT = 10
 
     def setUp(self):
         self.browser = webdriver.Firefox()
@@ -36,22 +30,17 @@ class NewVisitorTest(LiveServerTestCase):
                 time.sleep(0.5)
 
     def test_can_start_a_list_and_retrieve_it_later(self):
-        """
-        Edith has heard about a cool new online to-do app.
-        She goes to check out its homepage.
-        """        
+        
+        # Edith has heard about a cool new online to-do app.
+        # She goes to check out its homepage.
         self.browser.get(self.live_server_url)
-    
-        """
-        She notices the page title and header mention to-do lists.
-        """
+
+        # She notices the page title and header mention to-do lists.
         self.assertIn('To-Do', self.browser.title)
         header_text = self.browser.find_element(By.TAG_NAME, 'h1').text
         self.assertIn('To-Do', header_text)
 
-        """
-        She is invited to enter a to-do item straight away.
-        """
+        # She is invited to enter a to-do item straight away.
         inputbox = self.browser.find_element(By.ID, 'id_new_item')
         self.assertEqual(
             inputbox.get_attribute('placeholder'),
@@ -69,33 +58,22 @@ class NewVisitorTest(LiveServerTestCase):
             "1: peacock feathers" as an item in a to-do list.
         """
         inputbox.send_keys(Keys.ENTER)
-        time.sleep(1)
-        
-        self.check_for_row_in_list_table('1: Buy peacock feathers')
+        self.wait_for_row_in_list_table('1: Buy peacock feathers')
 
-        """
-        There is still a text box inviting her to add another item.
-            She enters "use peacock feathers to make a fly" (Edith
-            is very methodial.)
-        """
+        # There is still a text box inviting her to add another item.
+        # She enters "use peacock feathers to make a fly" (Edith is 
+        # very methodical.)
         inputbox = self.browser.find_element(By.ID, 'id_new_item')
         inputbox.send_keys('Use peacock feathers to make a fly')
         inputbox.send_keys(Keys.ENTER)
-        time.sleep(1)
 
-        """
-        The page updates again, and now shows both items on her list.
-        """
-        self.check_for_row_in_list_table('1: Buy peacock feathers')
-        self.check_for_row_in_list_table(
-            '2: Use peacock feathers to make a fly'
-            )
+        # The page updates again, and now shows both items on her list.
+        self.wait_for_row_in_list_table('2: Use peacock feathers to make a fly')
+        self.wait_for_row_in_list_table('1: Buy peacock feathers')
 
 # Edith wonders whether the site will remember her list.  Then she sees
 # that the site has generated a unique URL for her -- there is some
 # explanatory text to that effect.
-        # BUG #5 (testing): Clean up after FT runs
-        # TODO #6 (performance): remove time.sleeps.
         self.fail('Finish the test!')
 
 # She visits that URL - her to-do list is still there.
