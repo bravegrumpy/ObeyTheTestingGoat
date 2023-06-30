@@ -41,8 +41,17 @@ A rule of thumb for when to remove duplication from code.  When two pieces of co
 - I have implemented this using the Todo Tree extension, and Github's issue integration feature, so that each time I encounter something like this, I can use the issue workflow.
 - In this project, I'm often manually closing issues as they are completed, but this creates infastructure for me to use the main/dev/issue branch strucutre in real projects.
 
+### Ensure that tests don't affect each other
+
+Use Django's test runner in order to create a test database for each run.
+
+### Use a helper wait function
+
+Instead of adding in sleeps where stuff should load, create a function that waits for exactly the right amount of time.
+
 ## Completed Chapters
 
+- [x] [Chapter 6 -- Explicit Waits 1][Chatper 6]
 - [x] [Chapter 5 -- Post and Database][Chapter 5]
 - [x] [Chapter 4 -- Philosophy and Refactoring][Chapter 4]
 - [x] [Chapter 3 -- Unit Test First View][Chapter 3]
@@ -60,3 +69,4 @@ A rule of thumb for when to remove duplication from code.  When two pieces of co
 [Chapter 3]: https://www.obeythetestinggoat.com/book/chapter_unit_test_first_view.html
 [Chapter 4]: https://www.obeythetestinggoat.com/book/chapter_philosophy_and_refactoring.html
 [Chapter 5]: https://www.obeythetestinggoat.com/book/chapter_post_and_database.html
+[Chatper 6]: https://www.obeythetestinggoat.com/book/chapter_explicit_waits_1.html
