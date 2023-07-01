@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
+import os
 from selenium.common.exceptions import WebDriverException
 
 MAX_WAIT = 10
@@ -12,6 +13,9 @@ class NewVisitorTest(StaticLiveServerTestCase):
 
     def setUp(self):
         self.browser = webdriver.Firefox()
+        staging_server = os.environ.get('STAGING_SERVER')
+        if staging_server:
+            self.live_server_url = 'http://' + staging_server
 
     def tearDown(self):
         self.browser.quit()
@@ -124,20 +128,21 @@ class NewVisitorTest(StaticLiveServerTestCase):
         self.browser.set_window_size(1024, 768)
         
         # She notices the input box is nicely centered
-        inputbox = self.browser.find_element(By.ID, 'id_new_item')
+        inputbox_home = self.browser.find_element(By.ID, 'id_new_item')
         self.assertAlmostEqual(
-            inputbox.location['x'] + inputbox.size['width'] /2,
+            inputbox_home.location['x'] + inputbox_home.size['width'] /2,
             512,
             delta=10
         )
         
         # She starts a new list and sees the input is incely
         # centered there too.
-        inputbox.send_keys('testing')
-        inputbox.send_keys(Keys.ENTER)
+        inputbox_home.send_keys('testing')
+        inputbox_home.send_keys(Keys.ENTER)
         self.wait_for_row_in_list_table('1: testing')
+        inputbox_lists = self.browser.find_element(By.ID, 'id_new_item')
         self.assertAlmostEqual(
-            inputbox.location['x'] + inputbox.size['width'] / 2,
+            inputbox_lists.location['x'] + inputbox_lists.size['width'] / 2,
             512,
             delta=10
         )
