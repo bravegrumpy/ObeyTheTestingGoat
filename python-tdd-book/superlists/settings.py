@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-^sga4fiuh-1=-*dg&%^uq%&$i9k_*tt9r1h(s32p+2l*cno%c@
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'staging.lists.bravegrumpy.com',
+    'staging.lists.ottg.bravegrumpy.com:8000',
     'localhost',
     ]
 
