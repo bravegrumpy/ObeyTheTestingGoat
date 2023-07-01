@@ -4,6 +4,15 @@ This repo follows [Obey the Testing Goat](https://www.obeythetestinggoat.com/pag
 
 I am using it specifically to enhance my Django Web Dev skills.
 
+## Hosting
+
+This project is hosted at:
+
+Prod Server: <www.lists.ottg.bravegrumpy.com>
+Staging Server: <staging.lists.ottg.bravegrumpy.com>
+Testing Server: <test.lists.ottg.bravegrumpy.com>
+Dev Server: <dev.lists.ottg.bravegrumpy.com>
+
 ## Beyond the Book
 
 Once I've completed this book to the degree that I want to, I hope to:
