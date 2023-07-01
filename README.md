@@ -49,8 +49,14 @@ Use Django's test runner in order to create a test database for each run.
 
 Instead of adding in sleeps where stuff should load, create a function that waits for exactly the right amount of time.
 
+### Go from Working state to Working state with smallest amount of code possible
+
+Do NOT try to fix everything at once. We do not like the refactoring cat.
+The refactoring cat seems to be somthing I'm running into at work a little bit.
+
 ## Completed Chapters
 
+- [x] [Chapter 7 -- Working Incrementally][Chapter 7]
 - [x] [Chapter 6 -- Explicit Waits 1][Chatper 6]
 - [x] [Chapter 5 -- Post and Database][Chapter 5]
 - [x] [Chapter 4 -- Philosophy and Refactoring][Chapter 4]
@@ -70,3 +76,4 @@ Instead of adding in sleeps where stuff should load, create a function that wait
 [Chapter 4]: https://www.obeythetestinggoat.com/book/chapter_philosophy_and_refactoring.html
 [Chapter 5]: https://www.obeythetestinggoat.com/book/chapter_post_and_database.html
 [Chatper 6]: https://www.obeythetestinggoat.com/book/chapter_explicit_waits_1.html
+[Chapter 7]: https://www.obeythetestinggoat.com/book/chapter_working_incrementally.html
