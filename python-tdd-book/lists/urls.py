@@ -23,5 +23,3 @@ urlpatterns = [
     path('<slug:list_id>/', views.view_list, name='view_list'),
     path('<slug:list_id>/add_item', views.add_item, name='add_item'),
 ]
-
-# TODO: #11 Refactor away some of the duplication in urls.py
