@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-^sga4fiuh-1=-*dg&%^uq%&$i9k_*tt9r1h(s32p+2l*cno%c@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*'] # FIXME: #15 Bring this back to a limited set.
+ALLOWED_HOSTS = ['*'] # FIXME (security): #15 Bring this back to a limited set.
 
 
 # Application definition
@@ -100,6 +100,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CSRF_TRUSTED_ORIGINS = ["*"] # FIXME #16 (security) This should be limited. I just don't know how yet.
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
