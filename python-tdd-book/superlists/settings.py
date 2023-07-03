@@ -100,7 +100,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-CSRF_TRUSTED_ORIGINS = ["*"] # FIXME #16 (security) This should be limited. I just don't know how yet.
+CSRF_TRUSTED_ORIGINS = [
+    "http://*",
+    ] # FIXME #16 (security) This should be limited. I just don't know how yet.
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
