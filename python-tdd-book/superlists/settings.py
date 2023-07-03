@@ -101,6 +101,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
+    "http://staging.lists.ottg.bravegrumpy.com",
     "http://localhost"
     ] # FIXME #16 (security) This should be limited. I just don't know how yet.
 
