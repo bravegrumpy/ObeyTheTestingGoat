@@ -19,13 +19,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-^sga4fiuh-1=-*dg&%^uq%&$i9k_*tt9r1h(s32p+2l*cno%c@'
-
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['*'] # FIXME (security): #15 Bring this back to a limited set.
+if 'DJANGO_DEBUG_FALSE' in os.environ:
+    DEBUG = False
+    SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
+    ALLOWED_HOSTS = [os.environ['SITENAME']]
+else:
+    DEBUG = True
+    SECRET_KEY = 'django-insecure-^sga4fiuh-1=-*dg&%^uq%&$i9k_*tt9r1h(s32p  +2l*cno%c@'
+    ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -103,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 CSRF_TRUSTED_ORIGINS = [
     "http://staging.lists.ottg.bravegrumpy.com",
     "http://localhost"
-    ] # FIXME #16 (security) This should be limited. I just don't know how yet.
+    ]
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
